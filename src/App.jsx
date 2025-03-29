@@ -10,7 +10,9 @@ function App() {
     <div className='App'>
       <h1>weather forecast</h1>
       <Input/>
+
       <Button value="search"/>
+      
       <Card/>
       <Button value="refresh"/>
     </div>

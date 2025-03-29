@@ -1,4 +1,4 @@
-import Reacat from "react"
+import React from "react"
 
 const Input=(props)=>{
     return(
