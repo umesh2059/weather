@@ -1,15 +1,15 @@
 import React from "react"
-import { UseWeather } from "../context/weather";
+import {useWeather} from "../context/weather";
 
-const Input=(props)=>{
-    const Weather=UseWeather();
+const Input=()=>{
+    const Weather= useWeather();
     console.log("Weather",Weather);
     return(
         <input
         className="input-field"
-         placeholder={props.placeholder} 
-         value={props.value}
-          onChange={props.onChange}/>
+         placeholder="search here"
+         value={Weather.setSearchCity}
+          onChange={(e)=>Weather.setSearchCity(e.target.value)}/>
     );
 };
 export default Input;

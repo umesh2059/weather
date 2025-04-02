@@ -1,14 +1,16 @@
 import { createContext,useContext,useState } from "react";
 import {getWeatherDataforCity} from "../api";
 const weatherContext=createContext(null);
-export const UseWeather=()=>{
-    return useContext(weatherContext)
+
+export const useWeather = () => {
+    return useContext(weatherContext);
 };
+
 export const WeatherProvider =(props)=>{
     const [Data,setData]=useState(null);
-    const [searchCity,setSearchCity]=useState(null);
+    const [searchCity,setSearchCity]=useState("");
     const FetchData=async()=>{
-        const response= await getWeatherDataforCity()
+        const response= await getWeatherDataforCity(searchCity)
         setData(response);
     }
     return(
